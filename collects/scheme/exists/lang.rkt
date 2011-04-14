@@ -229,7 +229,7 @@
     udp-connected?
     udp?
     unit?
-    unknown?
+    ; ??? unknown?
     variable-reference?
     vector?
     void?
@@ -243,7 +243,7 @@
     #'(begin
         (define -predicates
           (let ([predicates (λ (x) 
-                              (if (∃? x)
+                              (if (∀∃? x)
                                   (error 'predicates "supplied with a wrapped value ~e" x)
                                   (predicates x)))])
             predicates)) 
